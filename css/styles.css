@@ -11734,6 +11734,8 @@ html {
 }
 
 .resized-image {
-    width: 300px;
-    height: auto;
+    max-width: 100%;   /* Ensure the image scales with the container */
+    height: auto;      /* Maintain aspect ratio */
+    margin-left: auto; /* Align image to the left */
+    margin-right: 15px; 
 }
