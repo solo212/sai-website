@@ -3,85 +3,330 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Modern Business - Start Bootstrap Template</title>
+        <meta name="description" content="Projects by Sai Akshay Sivakumar" />
+        <meta name="author" content="Sai Akshay Sivakumar" />
+        <title>Projects - Sai Akshay Sivakumar</title>
+
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+            rel="stylesheet"
+        />
+
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+
+        <!-- Core theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <style>
+            .project-card {
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                height: 100%;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12) !important;
+            }
+
+            .project-icon {
+                width: 52px;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+            }
+
+            .project-card li {
+                line-height: 1.6;
+                margin-bottom: 0.5rem;
+            }
+
+            .badge {
+                font-size: 0.75rem;
+                padding: 0.5em 0.75em;
+                border-radius: 999px;
+            }
+
+            .project-link {
+                text-decoration: none;
+            }
+
+            .project-link:hover {
+                text-decoration: underline;
+            }
+        </style>
     </head>
+
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Sai Akshay Sivakumar</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <a class="navbar-brand" href="index.html">
+                        <span class="fw-bolder text-primary">Sai Akshay Sivakumar</span>
+                    </a>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                           
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="resume.html">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="projects.html">Projects</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <!-- Projects Section-->
+
+            <!-- Projects Header-->
             <section class="py-5">
-                <div class="container px-5 mb-5">
+                <div class="container px-5">
                     <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                        <h1 class="display-5 fw-bolder mb-3">
+                            <span class="text-gradient d-inline">Projects</span>
+                        </h1>
+                        <p class="lead fw-normal text-muted mb-0">
+                            A collection of software, AI, data, and algorithm-focused projects.
+                        </p>
                     </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Campus Mapping</h2>
-                                            <p>Based on live construction and user data, there will be optimal routes given to UMD students to get to class, etc. As you can see, there is a report blocked path feature and yellow zones to mark construction. You can also manually click a starting and finishing location almost anywhere on campus. Click the image to play with the map.</p>
+
+                    <div class="row gx-5 gy-5 justify-content-center">
+
+                        <!-- Project 1 -->
+                        <div class="col-lg-6">
+                            <div class="card shadow border-0 rounded-4 project-card">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="project-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                            <i class="bi bi-cpu"></i>
                                         </div>
-                                        <a href="https://davidqchuang.github.io/campus-mapping-umd/#15.2/38.988232/-76.943309" target="_blank">
-                                        <img src="https://raw.githubusercontent.com/solo212/sai-website/main/assets/yes.png" alt="Description of the image" class="img-fluid resized-image">
-                                         </a>
+                                        <div>
+                                            <h2 class="fw-bolder mb-1">AI Incident Triage Platform</h2>
+                                            <p class="text-muted mb-0">Cloud-native AI support and log analysis tool</p>
+                                        </div>
                                     </div>
+
+                                    <div class="d-flex flex-wrap gap-2 mb-4">
+                                        <span class="badge bg-primary bg-gradient">AWS</span>
+                                        <span class="badge bg-primary bg-gradient">Kubernetes</span>
+                                        <span class="badge bg-primary bg-gradient">Docker</span>
+                                        <span class="badge bg-primary bg-gradient">FastAPI</span>
+                                        <span class="badge bg-primary bg-gradient">React</span>
+                                        <span class="badge bg-primary bg-gradient">PostgreSQL</span>
+                                        <span class="badge bg-primary bg-gradient">RAG</span>
+                                    </div>
+
+                                    <ul class="mb-4 ps-3">
+                                        <li>
+                                            Developed a cloud-native incident triage platform that uses retrieval-augmented generation
+                                            to answer technical questions from uploaded documentation, PDFs, and application logs.
+                                        </li>
+                                        <li>
+                                            Designed an ingestion pipeline with AWS S3, text extraction, chunking, embeddings,
+                                            and vector search to enable semantic retrieval over user-provided knowledge bases.
+                                        </li>
+                                    </ul>
+
+                                    <a class="project-link fw-bolder" href="#" target="_blank">
+                                        View Project
+                                        <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Project 2 -->
+                        <div class="col-lg-6">
+                            <div class="card shadow border-0 rounded-4 project-card">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="project-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                            <i class="bi bi-speedometer2"></i>
+                                        </div>
+                                        <div>
+                                            <h2 class="fw-bolder mb-1">Race Simulator</h2>
+                                            <p class="text-muted mb-0">Probabilistic race modeling and state estimation</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 mb-4">
+                                        <span class="badge bg-primary bg-gradient">Python</span>
+                                        <span class="badge bg-primary bg-gradient">Bayesian Networks</span>
+                                        <span class="badge bg-primary bg-gradient">Particle Filters</span>
+                                        <span class="badge bg-primary bg-gradient">Kalman Filters</span>
+                                        <span class="badge bg-primary bg-gradient">Git</span>
+                                    </div>
+
+                                    <ul class="mb-4 ps-3">
+                                        <li>
+                                            Implemented a Python race simulation and state-estimation engine using particle and
+                                            Kalman filters to estimate vehicle position, orientation, and velocity from noisy sensor inputs.
+                                        </li>
+                                        <li>
+                                            Modeled race dynamics with Bayesian networks to support probabilistic prediction of race
+                                            outcomes, driver behavior, and pit-stop strategy decisions.
+                                        </li>
+                                    </ul>
+
+                                    <a class="project-link fw-bolder" href="#" target="_blank">
+                                        View Project
+                                        <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="col-lg-6">
+                            <div class="card shadow border-0 rounded-4 project-card">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="project-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                            <i class="bi bi-bar-chart-line"></i>
+                                        </div>
+                                        <div>
+                                            <h2 class="fw-bolder mb-1">UFC Judge</h2>
+                                            <p class="text-muted mb-0">Machine learning for fight scoring consistency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 mb-4">
+                                        <span class="badge bg-primary bg-gradient">Python</span>
+                                        <span class="badge bg-primary bg-gradient">Pandas</span>
+                                        <span class="badge bg-primary bg-gradient">SQL</span>
+                                        <span class="badge bg-primary bg-gradient">scikit-learn</span>
+                                        <span class="badge bg-primary bg-gradient">Jupyter</span>
+                                        <span class="badge bg-primary bg-gradient">UFC API</span>
+                                    </div>
+
+                                    <ul class="mb-4 ps-3">
+                                        <li>
+                                            Developed a machine learning system to analyze round-level UFC fight statistics and generate
+                                            more consistent, data-driven scorecards using striking, grappling, and control metrics.
+                                        </li>
+                                        <li>
+                                            Integrated UFC fight data pipelines with Pandas and SQL, then trained and evaluated
+                                            classification models to compare predicted round outcomes against judging benchmarks.
+                                        </li>
+                                    </ul>
+
+                                    <a class="project-link fw-bolder" href="#" target="_blank">
+                                        View Project
+                                        <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 -->
+                        <div class="col-lg-6">
+                            <div class="card shadow border-0 rounded-4 project-card">
+                                <div class="card-body p-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="project-icon bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                            <i class="bi bi-map"></i>
+                                        </div>
+                                        <div>
+                                            <h2 class="fw-bolder mb-1">Campus Mapping</h2>
+                                            <p class="text-muted mb-0">Interactive route planning for UMD students</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap gap-2 mb-4">
+                                        <span class="badge bg-primary bg-gradient">JavaScript</span>
+                                        <span class="badge bg-primary bg-gradient">Python</span>
+                                        <span class="badge bg-primary bg-gradient">HTML/CSS</span>
+                                        <span class="badge bg-primary bg-gradient">OpenStreetMap</span>
+                                        <span class="badge bg-primary bg-gradient">Dijkstra</span>
+                                    </div>
+
+                                    <ul class="mb-4 ps-3">
+                                        <li>
+                                            Created an interactive campus routing tool that helps UMD students find efficient walking
+                                            paths across campus while accounting for blocked paths and construction zones.
+                                        </li>
+                                        <li>
+                                            Implemented route-planning features across campus buildings and walkways, including manual
+                                            start and destination selection on an interactive map.
+                                        </li>
+                                    </ul>
+
+                                    <a
+                                        class="project-link fw-bolder"
+                                        href="https://davidqchuang.github.io/campus-mapping-umd/#15.2/38.988232/-76.943309"
+                                        target="_blank"
+                                    >
+                                        View Live Map
+                                        <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
+
             <!-- Call to action section-->
             <section class="py-5 bg-gradient-primary-to-secondary text-white">
                 <div class="container px-5 my-5">
                     <div class="text-center">
                         <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="mailto:saisivakumar2004@gmail.com">
+                            Contact Me
+                        </a>
                     </div>
                 </div>
             </section>
         </main>
+
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Sai Sivakumar 2024</div></div>
                     <div class="col-auto">
-                        <a class="small" href="mailto:saisivakumar2004@gmail.com" target="_blank">Contact me via gmail/outlook</a>
+                        <div class="small m-0">Copyright &copy; Sai Akshay Sivakumar 2025</div>
+                    </div>
+
+                    <div class="col-auto">
+                        <a class="small" href="mailto:saisivakumar2004@gmail.com" target="_blank">
+                            Contact me via Gmail/Outlook
+                        </a>
                     </div>
                 </div>
             </div>
         </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
