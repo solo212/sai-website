@@ -3,202 +3,633 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Personal - Start Bootstrap Template</title>
+        <meta name="description" content="Resume page for Sai Akshay Sivakumar" />
+        <meta name="author" content="Sai Akshay Sivakumar" />
+        <title>Resume - Sai Akshay Sivakumar</title>
+
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+            rel="stylesheet"
+        />
+
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+
+        <!-- Core theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- Extra page styling -->
+        <style>
+            .experience-card,
+            .project-card,
+            .education-card,
+            .skills-card {
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .experience-card:hover,
+            .project-card:hover,
+            .education-card:hover,
+            .skills-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12) !important;
+            }
+
+            .experience-card h3,
+            .project-card h3 {
+                font-size: 1.35rem;
+            }
+
+            .experience-card li,
+            .project-card li {
+                line-height: 1.65;
+                font-size: 1rem;
+            }
+
+            .badge {
+                font-size: 0.75rem;
+                padding: 0.5em 0.75em;
+                border-radius: 999px;
+            }
+
+            .resume-meta-card {
+                min-height: 100%;
+            }
+
+            .skill-pill {
+                font-weight: 500;
+            }
+        </style>
     </head>
+
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Sai Akshay Sivakumar</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <a class="navbar-brand" href="index.html">
+                        <span class="fw-bolder text-primary">Sai Akshay Sivakumar</span>
+                    </a>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                     
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="resume.html">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projects.html">Projects</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+
             <!-- Page Content-->
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
+                    <h1 class="display-5 fw-bolder mb-3">
+                        <span class="text-gradient d-inline">Resume</span>
+                    </h1>
+                    <p class="lead fw-normal text-muted mb-0">
+                        Software engineering, machine learning, full-stack development, and data-driven systems.
+                    </p>
                 </div>
+
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="col-lg-11 col-xl-10 col-xxl-9">
+
                         <!-- Experience Section-->
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-                                <!-- Download resume button-->
-                                <!-- Note: Set the link href target to a PDF file within your project-->
-                             <a href="https://docs.google.com/document/d/1aqsTGV3Io2MWgk91YskDn7SnpLcWn9Hwp9QViVjzLQs/edit?tab=t.0" target="_blank">
-                       <button type="button">Resume</button>
-                                  </a>
 
-                        
+                                <a class="btn btn-primary px-4 py-3" href="assets/resume.pdf" target="_blank">
+                                    <div class="d-inline-block bi bi-download me-2"></div>
+                                    Resume
+                                </a>
                             </div>
-                            <!-- Experience Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+
+                            <!-- Experience Card 1 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 experience-card">
                                 <div class="card-body p-5">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">July 2024- Aug 2024</div>
-                                                <div class="small fw-bolder">Software Engineering Intern </div>
-                                                <div class="small text-muted">Lockheed Martin</div>
-                                                <div class="small text-muted">Orlando, Florida, USA</div>
+                                    <div class="row align-items-start gx-5">
+                                        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4 resume-meta-card">
+                                                <div class="text-primary fw-bolder mb-2">
+                                                    June 2025 – August 2025
+                                                </div>
+                                                <div class="small fw-bolder">
+                                                    Software Engineer Intern
+                                                </div>
+                                                <div class="small text-muted">
+                                                    Lockheed Martin
+                                                </div>
+                                                <div class="small text-muted mb-3">
+                                                    Orlando, FL
+                                                </div>
+
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <span class="badge bg-primary bg-gradient">C++</span>
+                                                    <span class="badge bg-primary bg-gradient">CMake</span>
+                                                    <span class="badge bg-primary bg-gradient">Docker</span>
+                                                    <span class="badge bg-primary bg-gradient">Linux</span>
+                                                    <span class="badge bg-primary bg-gradient">Spack</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><ul class="mb-0 ps-3">
-  <li class="mb-2">
-    Built an event-driven C++ service to ingest and process real-time device events,
-    implementing custom handlers for 5+ operations and enabling low-latency display
-    of operational data in a user-facing interface.
-  </li>
-  <li class="mb-2">
-    Extended a large-scale CMake build system with custom targets that centralized
-    build metadata across 10+ applications, reducing configuration errors by 25%
-    and improving automation and traceability in the build pipeline.
-  </li>
-  <li class="mb-2">
-    Containerized Linux build workflows with Docker and Spack to standardize dependency
-    management for 20+ C++ libraries and packages, improving environment reproducibility
-    and reducing developer setup time by 30%.
-  </li>
-  <li>
-    Delivered 13+ merge requests in an Agile environment, contributing code reviews,
-    documentation, and maintainable changes aligned with sprint goals.
-  </li>
-</ul></div>
+
+                                        <div class="col-lg-8">
+                                            <h3 class="fw-bolder mb-3">
+                                                Event-Driven Systems & Build Automation
+                                            </h3>
+
+                                            <ul class="mb-0 ps-3">
+                                                <li class="mb-2">
+                                                    Built an event-driven C++ service to ingest and process real-time device events,
+                                                    implementing custom handlers for 5+ operations and enabling low-latency display
+                                                    of operational data in a user-facing interface.
+                                                </li>
+                                                <li class="mb-2">
+                                                    Extended a large-scale CMake build system with custom targets that centralized
+                                                    build metadata across 10+ applications, reducing configuration errors by 25%
+                                                    and improving automation and traceability in the build pipeline.
+                                                </li>
+                                                <li class="mb-2">
+                                                    Containerized Linux build workflows with Docker and Spack to standardize dependency
+                                                    management for 20+ C++ libraries and packages, improving environment reproducibility
+                                                    and reducing developer setup time by 30%.
+                                                </li>
+                                                <li>
+                                                    Delivered 13+ merge requests in an Agile environment, contributing code reviews,
+                                                    documentation, and maintainable changes aligned with sprint goals.
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Experience Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+
+                            <!-- Experience Card 2 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 experience-card">
                                 <div class="card-body p-5">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">Aug 2022 - Dec 2023</div>
-                                                <div class="small fw-bolder">Undergraduate Researcher</div>
-                                                <div class="small text-muted">FIRE(First-Year Innovation and Research Experience)</div>
-                                                <div class="small text-muted">College Park, MD</div>
+                                    <div class="row align-items-start gx-5">
+                                        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4 resume-meta-card">
+                                                <div class="text-primary fw-bolder mb-2">
+                                                    July 2024 – August 2024
+                                                </div>
+                                                <div class="small fw-bolder">
+                                                    Software Engineer Bootcamp Student
+                                                </div>
+                                                <div class="small text-muted">
+                                                    Headstarter AI
+                                                </div>
+                                                <div class="small text-muted mb-3">
+                                                    Remote
+                                                </div>
+
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <span class="badge bg-primary bg-gradient">Next.js</span>
+                                                    <span class="badge bg-primary bg-gradient">React</span>
+                                                    <span class="badge bg-primary bg-gradient">OpenAI API</span>
+                                                    <span class="badge bg-primary bg-gradient">Python</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Utilized tools such as Matlab and Microsoft Excel to answer challenging multi-modal optimization research problems
-• Gained hands-on experience with simulation modeling to model and optimize designs for research problems, specifically
-utilizing CAD software
-• Leveraged software tools, namely JavaScript, Python, HTML, and CSS, to create a campus mapping project that finds
-the most efficient paths for students to walk from and to the 257 buildings on campus
-• Created a pathfinding algorithm in this project that improved runtime efficiency of our previously used algorithm by 238%
-</div></div>
+
+                                        <div class="col-lg-8">
+                                            <h3 class="fw-bolder mb-3">
+                                                Full-Stack AI Applications
+                                            </h3>
+
+                                            <ul class="mb-0 ps-3">
+                                                <li class="mb-2">
+                                                    Built a full-stack item-tracking application using Next.js, React, and OpenAI APIs,
+                                                    designing REST endpoints for item creation, search, and recommendation workflows
+                                                    with 95% recommendation accuracy in testing.
+                                                </li>
+                                                <li>
+                                                    Developed an AI customer support prototype integrating Next.js, React, WebSpeech API,
+                                                    and a Python sentiment analysis service; tested 20+ query scenarios, achieved 92%
+                                                    test-user satisfaction, and added automated tests for response quality and error handling.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Card 3 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 experience-card">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-start gx-5">
+                                        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4 resume-meta-card">
+                                                <div class="text-primary fw-bolder mb-2">
+                                                    August 2022 – December 2023
+                                                </div>
+                                                <div class="small fw-bolder">
+                                                    Undergraduate Researcher
+                                                </div>
+                                                <div class="small text-muted">
+                                                    University of Maryland
+                                                </div>
+                                                <div class="small text-muted mb-3">
+                                                    College Park, MD
+                                                </div>
+
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <span class="badge bg-primary bg-gradient">JavaScript</span>
+                                                    <span class="badge bg-primary bg-gradient">Python</span>
+                                                    <span class="badge bg-primary bg-gradient">MATLAB</span>
+                                                    <span class="badge bg-primary bg-gradient">HTML/CSS</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-8">
+                                            <h3 class="fw-bolder mb-3">
+                                                Routing Algorithms & Optimization Research
+                                            </h3>
+
+                                            <ul class="mb-0 ps-3">
+                                                <li class="mb-2">
+                                                    Built a campus-scale routing application using JavaScript, Python, HTML/CSS,
+                                                    and OpenStreetMap data to compute optimal walking paths across 257 buildings
+                                                    on a 1,340-acre campus.
+                                                </li>
+                                                <li class="mb-2">
+                                                    Implemented and optimized a Dijkstra-based pathfinding algorithm that improved
+                                                    average route computation time by 238% while handling 10,000+ graph nodes and
+                                                    edges with walkway, building, and access constraints.
+                                                </li>
+                                                <li>
+                                                    Automated multi-variable optimization experiments across 100+ parameter combinations
+                                                    using MATLAB and Excel workflows to evaluate tradeoffs between competing objectives.
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
+
+                        <!-- Projects Section-->
+                        <section>
+                            <h2 class="text-secondary fw-bolder mb-4">Projects</h2>
+
+                            <!-- Project Card 1 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 project-card">
+                                <div class="card-body p-5">
+                                    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <h3 class="fw-bolder mb-1">Race Simulator</h3>
+                                            <div class="text-muted mb-3">
+                                                Python, Bayesian Networks, Particle Filters, Kalman Filters, Git
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-secondary bg-gradient">Python</span>
+                                            <span class="badge bg-secondary bg-gradient">Bayesian Networks</span>
+                                            <span class="badge bg-secondary bg-gradient">Kalman Filters</span>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mb-0 ps-3">
+                                        <li class="mb-2">
+                                            Built a Python race simulation and state-estimation engine using a particle filter
+                                            to estimate vehicle position and orientation on a virtual track with over 90%
+                                            localization accuracy under noisy sensor conditions.
+                                        </li>
+                                        <li class="mb-2">
+                                            Implemented a Bayesian network to model race dynamics and driver behavior,
+                                            enabling probabilistic prediction of race outcomes and pit-stop strategies.
+                                        </li>
+                                        <li>
+                                            Developed a Kalman filter module to estimate vehicle velocity and location from
+                                            noisy GPS-like inputs, reducing average prediction error by 35% compared with
+                                            a naive smoothing baseline.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Project Card 2 -->
+                            <div class="card shadow border-0 rounded-4 mb-5 project-card">
+                                <div class="card-body p-5">
+                                    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <h3 class="fw-bolder mb-1">UFC Judge</h3>
+                                            <div class="text-muted mb-3">
+                                                Python, Pandas, SQL, scikit-learn, Jupyter, UFC API
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="badge bg-secondary bg-gradient">Python</span>
+                                            <span class="badge bg-secondary bg-gradient">Pandas</span>
+                                            <span class="badge bg-secondary bg-gradient">SQL</span>
+                                            <span class="badge bg-secondary bg-gradient">scikit-learn</span>
+                                        </div>
+                                    </div>
+
+                                    <ul class="mb-0 ps-3">
+                                        <li class="mb-2">
+                                            Built a Python-based ML system to analyze round-level fight statistics and improve
+                                            scoring consistency by 20% relative to a baseline human-scoring benchmark.
+                                        </li>
+                                        <li class="mb-2">
+                                            Integrated the official UFC API to ingest and normalize historical and live fight data,
+                                            building reusable data pipelines for downstream analysis and model training.
+                                        </li>
+                                        <li>
+                                            Used Pandas and SQL to analyze relationships between striking, grappling, and control
+                                            metrics and round-level judging outcomes, then trained and evaluated a logistic regression
+                                            model to generate more stable, data-driven scorecards.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
                         <!-- Education Section-->
                         <section>
                             <h2 class="text-secondary fw-bolder mb-4">Education</h2>
-                            <!-- Education Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+
+                            <div class="card shadow border-0 rounded-4 mb-5 education-card">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">2022 - 2026</div>
-                                                <div class="mb-2">
-                                                    <div class="small fw-bolder">University of Maryland, College Park</div>
-                                                    <div class="small text-muted">College Park, MD</div>
+                                        <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4 resume-meta-card">
+                                                <div class="text-secondary fw-bolder mb-2">
+                                                    Expected May 2026
                                                 </div>
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">Undergraduate</div>
-                                                    <div class="small text-muted">Computer Science</div>
+                                                <div class="small fw-bolder">
+                                                    University of Maryland, College Park
+                                                </div>
+                                                <div class="small text-muted">
+                                                    College Park, MD
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Involved in FIRE, AWS club, Goole Student Developer Club, and Tennis.</div></div>
+
+                                        <div class="col-lg-8">
+                                            <h3 class="fw-bolder mb-3">
+                                                B.S. in Computer Science
+                                            </h3>
+                                            <p class="mb-2">
+                                                Machine Learning Concentration; Minor in Statistics
+                                            </p>
+                                            <p class="text-muted mb-0">
+                                                Relevant Coursework: Data Structures, Algorithms, Computer Systems,
+                                                Databases, Artificial Intelligence, Machine Learning, Computer Vision,
+                                                Linear Algebra, and Statistics.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        
                         </section>
-                        <!-- Divider-->
-                        <div class="pb-5"></div>
+
                         <!-- Skills Section-->
                         <section>
-                            <!-- Skillset Card-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
+                            <div class="card shadow border-0 rounded-4 mb-5 skills-card">
                                 <div class="card-body p-5">
-                                    <!-- Professional skills list-->
+
+                                    <!-- Technical Skills -->
                                     <div class="mb-5">
                                         <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Professional Skills</span></h3>
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                                <i class="bi bi-tools"></i>
+                                            </div>
+                                            <h3 class="fw-bolder mb-0">
+                                                <span class="text-gradient d-inline">Technical Skills</span>
+                                            </h3>
                                         </div>
+
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Full-Stack Development</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Backend Development</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Frontend Development</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Full-Stack Development
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Backend Development
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Machine Learning
+                                                </div>
+                                            </div>
                                         </div>
+
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Data Analysis</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Database Design</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">User Interface Design</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Data Analysis
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Database Design
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Systems Programming
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- Languages list-->
+
+                                    <!-- Languages -->
+                                    <div class="mb-5">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                                <i class="bi bi-code-slash"></i>
+                                            </div>
+                                            <h3 class="fw-bolder mb-0">
+                                                <span class="text-gradient d-inline">Languages</span>
+                                            </h3>
+                                        </div>
+
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Python
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    C++
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Java
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    JavaScript / TypeScript
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    SQL
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    HTML / CSS
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row row-cols-1 row-cols-md-3">
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    OCaml
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    MATLAB
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    R / SAS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tools -->
                                     <div class="mb-0">
                                         <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Languages</span></h3>
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">
+                                                <i class="bi bi-terminal"></i>
+                                            </div>
+                                            <h3 class="fw-bolder mb-0">
+                                                <span class="text-gradient d-inline">Tools & Frameworks</span>
+                                            </h3>
                                         </div>
+
                                         <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Java</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    React / Next.js
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Docker / Kubernetes
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Git / Linux
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    CMake / Spack
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    AWS
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Jupyter
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">C</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML/CSS</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Node.js</div></div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Pandas / NumPy
+                                                </div>
+                                            </div>
+                                            <div class="col mb-4 mb-md-0">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    scikit-learn
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex align-items-center bg-light rounded-4 p-3 h-100 skill-pill">
+                                                    Bootstrap
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </section>
+
                     </div>
                 </div>
             </div>
         </main>
+
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Sai Akshay Sivakumar 2025</div></div>
                     <div class="col-auto">
-                        <a class="small" href="mailto:saisivakumar2004@gmail.com" target="_blank" >Contact me via gmail/outlook</a>
+                        <div class="small m-0">Copyright &copy; Sai Akshay Sivakumar 2026</div>
+                    </div>
+
+                    <div class="col-auto">
+                        <a class="small" href="mailto:saisivakumar2004@gmail.com" target="_blank">
+                            Contact me via Gmail/Outlook
+                        </a>
                     </div>
                 </div>
             </div>
         </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
